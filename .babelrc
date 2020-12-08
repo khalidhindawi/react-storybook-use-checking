@@ -1,0 +1,18 @@
+{
+  "presets": [
+      ["@babel/preset-env", {
+          "targets": { "node": "current" },
+          "include": ["transform-arrow-functions", "es6.map"],
+          "exclude": ["transform-regenerator", "es6.set"]
+      }],
+      "@babel/preset-typescript",
+      "@babel/preset-react"
+  ],
+  "plugins": [
+    ["babel-plugin-styled-components", {displayName: true}],
+    "babel-plugin-transform-typescript-metadata",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "babel-plugin-parameter-decorator"
+  ]
+}
